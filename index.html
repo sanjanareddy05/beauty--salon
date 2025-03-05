@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Look & Feel Beautiful</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', 
+        };
+    </script>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 min-h-screen transition duration-300">
+
+    <nav class="bg-gray-900 text-white p-4 fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-pink-400">Home</a></li>
+                <li><a href="services.html" class="hover:text-pink-400">Services</a></li>
+                <li><a href="about.html" class="hover:text-pink-400">About</a></li>
+                <li><a href="testimonials.html" class="hover:text-pink-400">Testimonials</a></li>
+                <li><a href="contact.html" class="text-pink-400">Contact</a></li>
+            </ul>
+            <button onclick="toggleDarkMode()" class="bg-pink-500 px-4 py-2 rounded text-white hover:bg-pink-700">
+                 Dark Mode
+            </button>
+        </div>
+    </nav>
+
+    <header class="relative h-96 bg-cover bg-center mt-16" 
+        style="background: url('./assets/bg1.jpeg') center/cover no-repeat;">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center">
+            <h1 class="text-5xl font-bold">Look & Feel Beautiful</h1>
+            <p class="text-lg mt-2">The Best Service. The Best Styles.</p>
+        </div>
+    </header>
+
+    <section class="text-center py-8">
+        <p class="text-lg italic">Need to speak with a specific stylist?</p>
+        <button class="mt-2 px-6 py-2 bg-pink-500 text-white rounded hover:bg-pink-700">Schedule a Call</button>
+    </section>
+
+    <section id="services" class="container mx-auto p-8 text-center">
+        <h2 class="text-3xl font-semibold">A Full Service Experience</h2>
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div>
+                <img src="./assets/hair-styling.jpg" alt="Hair Styling" class="rounded shadow-md w-full h-64 object-cover">
+                <h3 class="mt-2 text-xl font-bold">Hair Styling</h3>
+            </div>
+            <div>
+                <img src="./assets/nail-treatments.jpg" alt="Nail Treatments" class="rounded shadow-md w-full h-64 object-cover">
+                <h3 class="mt-2 text-xl font-bold">Nail Treatments</h3>
+            </div>
+            <div>
+                <img src="./assets/makeup-services.jpg" alt="Makeup Services" class="rounded shadow-md w-full h-64 object-cover">
+                <h3 class="mt-2 text-xl font-bold">Makeup Services</h3>
+            </div>
+        </div>
+        <h3 class="mt-4 text-gray-700 dark:text-gray-300">
+            At <span class="font-semibold">At [ Business Name ], our goal is to make you shine like a star. We create flattering, contemporary looks for our guests, specializing in versatile styles for everyday life. Whether you want something fashion forward, timeless, or just for a special event, [ Business Name ] has your answer.
+                We believe that you are your best accessory. This is why we offer a full service experience including hair styling, nail treatments, and makeup services.
+        </h3>
+    </section>
+
+    <footer class="bg-pink-600 text-white text-center p-4 mt-8">
+        <p>Call or email to book an appointment: 555-555-5555 or [email address]</p>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Look & Feel Beautiful</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        };
+
+        function toggleDropdown(id) {
+            document.getElementById(id).classList.toggle("hidden");
+        }
+
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 min-h-screen transition duration-300">
+    
+    <nav class="bg-gray-900 text-white p-4 fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-pink-400">Home</a></li>
+                <li><a href="services.html" class="text-pink-400">Services</a></li>
+                <li><a href="about.html" class="hover:text-pink-400">About</a></li>
+                <li><a href="testimonials.html" class="hover:text-pink-400">Testimonials</a></li>
+                <li><a href="contact.html" class="hover:text-pink-400">Contact</a></li>
+            </ul>
+            <!-- Dark Mode Toggle -->
+            <button onclick="toggleDarkMode()" class="bg-pink-500 px-4 py-2 rounded text-white hover:bg-pink-700">
+                 Dark Mode
+            </button>
+        </div>
+    </nav>
+    
+    <header class="relative h-96 bg-cover bg-center mt-16" 
+        style="background: url('./assets/bg2.jpg') center/cover no-repeat;">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center">
+            <h1 class="text-5xl font-bold">Services</h1>
+        </div>
+    </header>
+    
+    <section class="container mx-auto p-8 text-center">
+        <h2 class="text-2xl font-semibold text-pink-500">List of Services</h2>
+        <p class="text-gray-700 dark:text-gray-300 mt-2 max-w-2xl mx-auto">
+            You're a beautiful canvas, and we're all about helping your inner beauty emerge. We create exclusive looks inspired by your personal style, event needs, and taste. Our team uses their eye for detail and high-quality salon products to deliver a range of services.        </p>
+        <img src="./assets/21.jpg" 
+            alt="Beauty Services" class="rounded shadow-md w-full max-w-md mx-auto my-6">
+        
+        <div class="text-left max-w-2xl mx-auto">
+            <h3 class="text-xl font-bold text-pink-500 cursor-pointer flex justify-between items-center" onclick="toggleDropdown('hair-styling')">
+                Hair Styling <span>▼</span>
+            </h3>
+            <ul id="hair-styling" class="text-gray-700 dark:text-gray-300 list-disc pl-6 hidden transition duration-300">
+                <li>Blow Dry | $32+</li>
+                <li>Women's Cut | $48+</li>
+                <li>Men’s Cut | $22+</li>
+                <li>Children’s Cut | $18+</li>
+                <li>Styles | $50+</li>
+                <li>Single Process Color (no foils) | $49+</li>
+                <li>Highlights | $62+</li>
+                <li>Treatments | $12+</li>
+            </ul>
+            
+            <h3 class="text-xl font-bold text-pink-500 mt-4 cursor-pointer flex justify-between items-center" onclick="toggleDropdown('nail-treatments')">
+                Nail Treatments <span>▼</span>
+            </h3>
+            <ul id="nail-treatments" class="text-gray-700 dark:text-gray-300 list-disc pl-6 hidden transition duration-300">
+                <li>Manicure | $22</li>
+                <li>French Manicure | $24</li>
+                <li>Acrylic Tips | $57+</li>
+                <li>Fill In | $37+</li>
+                <li>Polish Change | $14+</li>
+            </ul>
+            
+            <h3 class="text-xl font-bold text-pink-500 mt-4 cursor-pointer flex justify-between items-center" onclick="toggleDropdown('makeup-services')">
+                Makeup Services <span>▼</span>
+            </h3>
+            <ul id="makeup-services" class="text-gray-700 dark:text-gray-300 list-disc pl-6 hidden transition duration-300">
+                <li>Full Face Makeup | $52+</li>
+                <li>Eye Makeup Only | $32+</li>
+                <li>Eyebrow Arch (tweezing) | $12+</li>
+            </ul>
+        </div>
+    </section>
+    
+    <footer class="bg-pink-600 text-white text-center p-4 mt-8">
+        <p>Call or email to book an appointment: 555-555-5555 or [email address]</p>
+    </footer>
+
+</body>
+</html>

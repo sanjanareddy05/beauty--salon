@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Look & Feel Beautiful</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        });
+    </script>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen">
+    
+    <nav class="bg-gray-900 text-white p-4 fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-pink-400">Home</a></li>
+                <li><a href="services.html" class="hover:text-pink-400">Services</a></li>
+                <li><a href="about.html" class="hover:text-pink-400">About</a></li>
+                <li><a href="testimonials.html" class="text-pink-400">Testimonials</a></li>
+                <li><a href="contact.html" class="hover:text-pink-400">Contact</a></li>
+            </ul>
+            <button onclick="toggleDarkMode()" class="px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-700">Dark Mode</button>
+        </div>
+    </nav>
+    
+    <header class="relative h-96 bg-cover bg-center mt-16" style="background: url('./assets/bg.jpeg') center/cover no-repeat;">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center">
+            <h1 class="text-5xl font-bold">Gallery & Testimonials</h1>
+        </div>
+    </header>
+    
+    <section class="container mx-auto p-8 text-center">
+        <h2 class="text-2xl font-semibold text-pink-500">Testimonials</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 text-gray-700 dark:text-gray-300">
+            <div class="p-4 border rounded shadow-md dark:border-gray-700">
+                <p>I've been coming here for years and [ Name ] is the best! I've never had a more consistent or higher quality hair coloring experience. I'm very particular and have followed [ Name ] from [ Business Name ] to [ Business Name ], because I do not like change! Thanks so much [ Name ]!</p>
+                <p class="mt-2 text-gray-500 dark:text-gray-400">- [Name]</p>
+            </div>
+            <div class="p-4 border rounded shadow-md dark:border-gray-700">
+                <p>OMG! I mean...I couldn't believe it! [ Name ] and [ Name ] made my hair and makeup look amazing! My sister and I were in town for the week and decided to get our hair and makeup done. I wanted to try something different than my normal look, and both stylists were great!</p>
+                <p class="mt-2 text-gray-500 dark:text-gray-400">- [Name]</p>
+            </div>
+            <div class="p-4 border rounded shadow-md dark:border-gray-700">
+                <p>I have to admit, I'm a picky client. I saw [ Name ] and [ Name ] during my visit and couldn't be happier. My hair looks amazing and I feel gorgeous! Thanks for the best mani pedi I've had since I last visited the city. I've recommended [ Business Name ] to all my friends! I love this place!</p>
+                <p class="mt-2 text-gray-500 dark:text-gray-400">- [Name]</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="container mx-auto p-8 text-center">
+        <h3 class="text-xl font-bold text-pink-500">Our Styles</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+            <img src="./assets/ss.jpg" alt="Style 1" class="rounded shadow-md object-cover w-full h-64">
+            <img src="./assets/ss1.jpg" alt="Style 2" class="rounded shadow-md object-cover w-full h-64">
+            <img src="./assets/ss2.jpg" alt="Style 3" class="rounded shadow-md object-cover w-full h-64">
+            <img src="./assets/ss3.jpg" alt="Style 4" class="rounded shadow-md object-cover w-full h-64">
+            <img src="./assets/31.jpg" alt="Style 5" class="rounded shadow-md object-cover w-full h-64">
+            <img src="./assets/32.jpg" alt="Style 6" class="rounded shadow-md object-cover w-full h-64">
+        </div>
+    </section>
+    
+    <footer class="bg-pink-600 text-white text-center p-4 mt-8">
+        <p>Call or email to book an appointment: 555-555-5555 or [email address]</p>
+    </footer>
+    
+</body>
+</html>

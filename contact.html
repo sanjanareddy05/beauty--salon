@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Look & Feel Beautiful</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 min-h-screen">
+    
+    <nav class="bg-gray-900 text-white p-4 fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto flex justify-between">
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-pink-400">Home</a></li>
+                <li><a href="services.html" class="hover:text-pink-400">Services</a></li>
+                <li><a href="about.html" class="hover:text-pink-400">About</a></li>
+                <li><a href="testimonials.html" class="hover:text-pink-400">Testimonials</a></li>
+                <li><a href="contact.html" class="text-pink-400">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+    <header class="relative h-96 bg-cover bg-center mt-16" style="background: url('./assets/bg4.jpg') center/cover no-repeat;">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center">
+            <h1 class="text-5xl font-bold">Contact Us</h1>
+        </div>
+    </header>
+    
+    <section class="container mx-auto p-8 text-center">
+        <h2 class="text-2xl font-semibold text-pink-500">Hours & Appointments</h2>
+        <p class="mt-4">Call or email to book an appointment: 555-555-5555 or [email address]</p>
+        <div class="mt-4 text-gray-700">
+            <p>Monday - Wednesday: 9AM - 6PM</p>
+            <p>Thursday - Friday: 9AM - 8PM</p>
+            <p>Saturday: 9AM - 6PM</p>
+            <p>Sunday: Closed</p>
+        </div>
+    </section>
+    
+    <section class="container mx-auto p-8 text-center">
+        <h3 class="text-xl font-bold text-pink-500">Visit Us</h3>
+        <p class="mt-2">We are located at 1234 Bleacher Ave. between 4th St. and 5th St. We're looking forward to your visit!</p>
+        <div class="mt-4 flex flex-col md:flex-row gap-4 justify-center items-center">
+            <img src="./assets/41.jpeg" class="w-full md:w-1/2 h-64 rounded shadow-md object-cover">
+            <iframe 
+                class="w-full md:w-1/2 h-64 rounded shadow-md" 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6045.856526402286!2d-74.002634!3d40.741604!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bee4f555cf%3A0xd91a3b142bcc71dc!2s111%208th%20Ave%2C%20New%20York%2C%20NY%2010011!5e0!3m2!1sen!2sus!4v1741194577829!5m2!1sen!2sus" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <footer class="bg-pink-600 text-white text-center p-4 mt-8">
+        <p>Call or email to book an appointment: 555-555-5555 or [email address]</p>
+    </footer>
+    
+</body>
+</html>
